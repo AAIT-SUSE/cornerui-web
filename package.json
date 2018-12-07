@@ -1,0 +1,15 @@
+{
+  "name": "cornerui-web",
+  "version": "0.0.1",
+  "description": "A simple, intuitive and esay to use web UI framework/component library designed for AAIT@SUSE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Owen Tsai <owentsai.v@gmail.com> (http://www.aait-suse.cn/Owen-Tsai/)",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.27.1",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

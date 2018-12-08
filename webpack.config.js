@@ -2,19 +2,20 @@ let path = require('path');
 let ExtractPlugin = require('extract-text-webpack-plugin');
 let CleanPlugin = require('clean-webpack-plugin');
 let HtmlPlugin = require('html-webpack-plugin');
+let webpack = require('webpack');
 
 let extractPlugin = new ExtractPlugin({
   filename: "main.css"
 });
 
-module.exports({
-  entry: "src/js/index.js",
+module.exports = {
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
     // publicPath: "dist", //// no need to set public path when using html-loader and html-plugin
   },
-  modules: {
+  module: {
     rules: [
       {
         // for javascript files
@@ -29,10 +30,10 @@ module.exports({
         ]
       },
       {
-        // for less
-        test: /\.less$/,
+        // for scss
+        test: /\.scss$/,
         use: extractPlugin.extract({
-          use: ["css-loader", "less-loader"]
+          use: ["css-loader", "sass-loader"]
         })
       },
       {
@@ -63,7 +64,8 @@ module.exports({
             loader: "file-loader",
             options: {name: "[name].[ext]"}
           }
-        ]
+        ],
+        exclude: path.resolve(__dirname, "src/index.html")
       }
     ]
   },
@@ -75,7 +77,8 @@ module.exports({
     extractPlugin,
     new CleanPlugin(["dist"]),
     new HtmlPlugin({
+      filename: "index.html",
       template: "src/index.html"
     })
   ]
-});
+};

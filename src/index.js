@@ -6,9 +6,4 @@
  * Import all needed files here, so that webpack will generate bundles and inject headers.
  * ------------------------------------------------ */
 
-// Import all scss stylesheets
-import "./scss/layout/_layout.scss"
-
-// Import all javascript files
-
-// Import all html files
+import "./scss/boot/_normalize.scss"

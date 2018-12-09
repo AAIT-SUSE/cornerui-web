@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "webpack-dev-server",
     "build": "webpack",
-    "build:prod": "webpack -p"
+    "build-min": "webpack -p"
   },
   "author": "Owen Tsai <owentsai.v@gmail.com> (http://www.aait-suse.cn/Owen-Tsai/)",
   "license": "MIT",

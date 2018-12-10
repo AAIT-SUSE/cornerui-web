@@ -5,5 +5,3 @@
  *
  * Import all needed files here, so that webpack will generate bundles and inject headers.
  * ------------------------------------------------ */
-
-import "./scss/boot/_normalize.scss"

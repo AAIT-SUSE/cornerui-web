@@ -6,3 +6,4 @@
  * Import all needed files here, so that webpack will generate bundles and inject headers.
  * ------------------------------------------------ */
 import "../src/scss/layout/_layout.scss"
+import "../src/scss/animation/animation"

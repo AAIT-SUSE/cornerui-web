@@ -1,0 +1,36 @@
+/*
+ All variables related to layout and grid system is defined here.
+ Author: Owen Tsai [copyright (c) Owen Tsai, 2018]
+ License: MIT
+ */
+
+/*
+ Screen Breakpoints
+ Designed follow: https://www.w3schools.com/css/css_rwd_mediaqueries.asp - Typical Breakpoints
+  xs for ExtraSmall,
+  lgr for Larger
+ */
+$screen-breakpoints: (
+  xs: 0px,
+  sm: 600px,
+  md: 768px,
+  lg: 992px,
+  lgr: 1200px
+);
+
+/*
+ Max screen width for each breakpoints
+ Used to set max width for .container
+  * ExtraSmall devices do not have max-width limitation
+ */
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 960px,
+  lgr: 1140px
+);
+
+// How many columns should a row have?
+$grid-columns: 12 !default;
+
+$gutter-width: 24px !default;

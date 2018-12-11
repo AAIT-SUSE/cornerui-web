@@ -9,6 +9,13 @@
  *    IE on Windows Phone and in iOS.
  */
 
+/*
+ * Font stack
+ */
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
 html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -24,6 +31,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 /**
@@ -88,7 +96,7 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  font-family: $font-family-monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -142,7 +150,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: $font-family-monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -242,7 +250,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif; /* 1 */
+  font-family: $font-family-base; /* 1 */
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
@@ -320,7 +328,7 @@ fieldset {
  */
 
 legend {
-  box-sizing: border-box; /* 1 */
+  box-sizing: content-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -353,7 +361,7 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
+  box-sizing: content-box; /* 1 */
   padding: 0; /* 2 */
 }
 
